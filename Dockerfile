@@ -10,7 +10,7 @@ WORKDIR /app
 # COPY pom.xml .
 # COPY src src
 
-COPY --chown=spring:spring target/consultation-0.0.1-SNAPSHOT.jar app.jar
+COPY --chown=spring:spring consultation-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 10001
 
