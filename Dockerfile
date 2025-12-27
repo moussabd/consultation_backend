@@ -1,0 +1,17 @@
+FROM eclipse-temurin:21-jre-alpine
+
+RUN addgroup -S spring && adduser -S spring -G spring
+USER spring:spring
+
+WORKDIR /app
+
+# COPY mvnw .
+# COPY .mvn .mvn
+# COPY pom.xml .
+# COPY src src
+
+COPY --chown=spring:spring target/consultation-0.0.1-SNAPSHOT.jar app.jar
+
+EXPOSE 10001
+
+ENTRYPOINT [ "java", "-jar", "/app/app.jar" ]

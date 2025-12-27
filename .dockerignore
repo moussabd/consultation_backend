@@ -1,0 +1,12 @@
+.git
+.gitignore
+*.iml
+.idea
+target/classes
+target/test-classes
+node_modules
+Dockerfile*
+docker-compose*
+README.md
+*.log
+.env
