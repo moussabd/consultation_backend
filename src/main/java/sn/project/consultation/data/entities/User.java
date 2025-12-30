@@ -18,6 +18,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Inheritance(strategy = InheritanceType.JOINED)
+@Table(name = "users")
 public abstract class User {
 
     @Id
