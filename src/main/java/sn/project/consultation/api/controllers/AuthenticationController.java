@@ -11,7 +11,6 @@ import sn.project.consultation.api.dto.AuthenticationRequest;
 import sn.project.consultation.api.dto.AuthenticationResponse;
 import sn.project.consultation.api.dto.RegisterRequest;
 import sn.project.consultation.api.dto.UserDTO;
-import sn.project.consultation.data.entities.User;
 import sn.project.consultation.security.AuthenticationService;
 
 @RestController
