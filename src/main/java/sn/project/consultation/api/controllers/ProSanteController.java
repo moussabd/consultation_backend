@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import sn.project.consultation.api.dto.ProSanteDTO;
-import sn.project.consultation.data.entities.Patient;
 import sn.project.consultation.data.entities.ProSante;
 import sn.project.consultation.data.repositories.ProSanteRepository;
 
