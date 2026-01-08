@@ -30,12 +30,13 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
 
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(
-                                "/api/**",
-                                "/swagger-ui/**",
-                                "/v3/api-docs/**"
-                        ).permitAll()
-                        .anyRequest().authenticated()
+                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
+
+                        // Endpoint recherche public
+                        .requestMatchers("/api/rendezvous/recherche").permitAll()
+
+                        // Tous les autres endpoints sécurisés
+                        .requestMatchers("/api/**", "/api/pros/**", "/api/admin/**").authenticated()
                 )
 
                 .sessionManagement(session ->
